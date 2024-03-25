@@ -7,7 +7,9 @@ beforeAll(async () => {
     await AppDataSource.initialize()
 });
 
-
+afterAll(async () =>  {
+    await AppDataSource.destroy()
+})
 
 describe("Pessoa Routes", () => {
     it("Create route", async () => {
